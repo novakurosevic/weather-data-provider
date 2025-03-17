@@ -1,0 +1,35 @@
+{
+    "name": "noki/weather-data-provider",
+    "description": "Simple Laravel weather data provider",
+    "keywords": [
+        "laravel",
+        "weather",
+        "noki"
+    ],
+    "version": "1.0.0",
+    "type": "library",
+    "homepage": "https://github.com/novakurosevic",
+    "authors": [
+        {
+            "name": "Novak Urosevic",
+            "role": "Developer"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Noki\\WeatherDataProvider\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.3",
+        "laravel/framework": "^11.31",
+        "symfony/console": "^7.0",
+        "symfony/var-dumper": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
