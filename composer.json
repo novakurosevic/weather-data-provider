@@ -8,7 +8,7 @@
     ],
     "version": "1.0.0",
     "type": "library",
-    "homepage": "https://github.com/novakurosevic",
+    "homepage": "https://github.com/novakurosevic/weather-data-provider",
     "authors": [
         {
             "name": "Novak Urosevic",
@@ -30,6 +30,22 @@
     "require-dev": {
         "phpunit/phpunit": "^10.5"
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Noki\\WeatherDataProvider\\Providers\\WeatherServiceProvider"
+            ],
+            "aliases": {
+                "WeatherProvider": "Noki\\WeatherDataProvider\\Facades\\WeatherFacade"
+            }
+        }
+    },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/novakurosevic/weather-data-provider"
+        }
+    ]
 }
