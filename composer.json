@@ -25,7 +25,8 @@
         "php": "^8.3",
         "laravel/framework": "^11.31",
         "symfony/console": "^7.0",
-        "symfony/var-dumper": "^7.0"
+        "symfony/var-dumper": "^7.0",
+        "noki/weather-data-provider": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.5"
