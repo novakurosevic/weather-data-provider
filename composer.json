@@ -17,7 +17,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Noki\\WeatherDataProvider\\": "src/"
+            "Noki\\WeatherDataProvider\\": "src/",
+            "Noki\\WeatherDataProvider\\Providers\\": "src/Providers/"
         }
     },
     "require": {
