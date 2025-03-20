@@ -6,7 +6,6 @@
         "weather",
         "noki"
     ],
-    "version": "1.0.0",
     "type": "library",
     "homepage": "https://github.com/novakurosevic/weather-data-provider",
     "authors": [
