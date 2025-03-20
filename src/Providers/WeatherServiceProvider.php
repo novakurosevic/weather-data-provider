@@ -1,6 +1,6 @@
 <?php
 
-namespace Noki\WeatherDataProvider;
+namespace Noki\WeatherDataProvider\Providers;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
