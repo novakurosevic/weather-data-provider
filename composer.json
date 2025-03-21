@@ -18,8 +18,8 @@
     "autoload": {
         "psr-4": {
             "Noki\\WeatherDataProvider\\": "src/",
-            "Noki\\WeatherDataProvider\\Dto\\": "src/Providers/",
-            "Noki\\WeatherDataProvider\\Providers\\": "src/Dto/",
+            "Noki\\WeatherDataProvider\\Dto\\": "src/Dto/",
+            "Noki\\WeatherDataProvider\\Providers\\": "src/Providers/",
             "Noki\\WeatherProvider\\Interfaces\\": "src/WeatherProvider/Interfaces/",
             "Noki\\WeatherProvider\\Exeptions\\": "src/WeatherProvider/Exeptions/",
             "Noki\\WeatherProvider\\Providers\\": "src/WeatherProvider/Providers/"
