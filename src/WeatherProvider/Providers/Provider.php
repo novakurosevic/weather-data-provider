@@ -13,7 +13,7 @@ use Illuminate\Http\Client\Response;
 abstract class Provider implements FetchFromAPIInterface, AllDataInterface
 {
     const string DATE_FORMAT = 'Y-m-d H:i:s';
-    protected string $api_key; // API key for every provider
+    protected string|null $api_key; // API key for every provider
     protected WeatherConfig $config;
     protected array $unit_allowed = []; // Define allowed units in every provider class
 
