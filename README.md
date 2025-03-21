@@ -166,7 +166,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Credits
 
-- [Stefan Damjanovic](https://github.com/stfndamjanovic)
+- [Novak Urosevic](https://github.com/novakurosevic)
 - [All Contributors](../../contributors)
 
 ## License
