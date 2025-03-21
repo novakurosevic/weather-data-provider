@@ -191,16 +191,30 @@ class WeatherConfig
 
     }
 
-    public static function create(int $provider_id, int|float|string $longitude, int|float|string $latitude, $object = null): self
+    public static function create(int|null $provider_id, int|float|string|null  $longitude,
+                                  int|float|string|null $latitude, $object = null): self
     {
         if(is_null($object)){
             $object = new self();
         }
+
+        if(!isset($provider_id)){
+            throw new WeatherDataException('Provider id is not set.', 'Config Error');
+        }
+
         $object = $object::setProviderId($object, $provider_id);
+
+        if(!isset($longitude)){
+            throw new WeatherDataException('Longitude is not set.', 'Config Error');
+        }
 
         $longitude = (float) $longitude;
         if((180 < $longitude) || (-180 > $longitude)) {
             throw new WeatherDataException('Longitude value is not valid.', 'Config Error');
+        }
+
+        if(!isset($latitude)){
+            throw new WeatherDataException('Latitude is not set.', 'Config Error');
         }
 
         $latitude = (float) $latitude;
