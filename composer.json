@@ -1,9 +1,10 @@
 {
     "name": "noki/weather-data-provider",
-    "description": "Simple Laravel weather data provider",
+    "description": "Laravel Weather Provider is simple Laravel package for weather data providing",
     "keywords": [
         "laravel",
         "weather",
+        "Laravel Weather Provider",
         "noki"
     ],
     "type": "library",
@@ -25,6 +26,11 @@
             "Noki\\WeatherProvider\\Providers\\": "src/WeatherProvider/Providers/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Noki\\WeatherDataProvider\\Tests\\": "tests"
+        }
+    },
     "require": {
         "php": "^8.3",
         "laravel/framework": "^11.31|^12.0",
@@ -32,7 +38,8 @@
         "symfony/var-dumper": "^7.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.5"
+        "phpunit/phpunit": "^10.5",
+        "mockery/mockery": "^1.6"
     },
     "extra": {
         "laravel": {

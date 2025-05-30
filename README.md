@@ -1,11 +1,9 @@
-# Weather Data Provider
-
-Simple Laravel weather data provider
+# Laravel Weather Provider Package
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/noki/weather-data-provider.svg?style=flat-square)](https://packagist.org/packages/noki/weather-data-provider)
 
 
-This is simple Laravel package for providing weather information. At this moment in version 1.0.0 there are only supported two weather providers with option to provide weather data in past. It is possible to provide weather for last 24h with display weather data per hour or weather data for last hour by minute. New features should be added in the future.
+This is simple Laravel package for providing weather information. At this moment in version 1.0.0 there are only supported two weather providers with option to provide weather data in the past. It is possible to provide weather for last 24h with display weather data per hour or weather data for last hour by minute. New features should be added in the future.
 
 ## Installation
 
@@ -61,36 +59,50 @@ For providing weather it is required to add provider id in WeatherConfig and lon
 Example of config with provider Tomorrow IO (id 1) and longitude and latitude for Berlin, Germany. For longitude and latitude you can use strings and numbers (integer and float).
 
 ```php
+use Noki\WeatherDataProvider\WeatherConfig as WeatherConfig;
+
 $config = WeatherConfig::create(1, '52.5202',13.4043);
 ```
 
 **Config example 2:** Setting of minutely, hourly and daily weather data frequencies. **Note:** Some integrations do not support all of these options. Usually all integrations support hourly weather data.
 ```php
+use Noki\WeatherDataProvider\WeatherConfig as WeatherConfig;
+
 $config = WeatherConfig::create(1, '52.5202',13.4043)->minutely()->hourly()->daily();
 ```
 
 **Config example 3:** Setting of minutely and hourly weather data frequencies and turning off daily.
 ```php
+use Noki\WeatherDataProvider\WeatherConfig as WeatherConfig;
+
 $config = WeatherConfig::create(1, '52.5202',13.4043)->minutely()->hourly()->daily(false);
 ```
 
 **Config example 4:** Setting of minutely and hourly weather data frequencies and turning off daily.
 ```php
+use Noki\WeatherDataProvider\WeatherConfig as WeatherConfig;
+
 $config = WeatherConfig::create(1, '52.5202',13.4043)->minutely()->hourly()->daily(false);
 ```
 
 **Config example 5:** Set providing data about temperature, pressure, wind and humidity.
 ```php
+use Noki\WeatherDataProvider\WeatherConfig as WeatherConfig;
+
 $config = WeatherConfig::create(1, '52.5202',13.4043)->temperature()->pressure()->wind()->humidity();
 ```
 
 **Config example 6:** Set imperial units for weather data output.
 ```php
+use Noki\WeatherDataProvider\WeatherConfig as WeatherConfig;
+
 $config = WeatherConfig::create(1, '52.5202',13.4043)->imperial();
 ```
 
 **Config example 7:** Set metric units for weather data output.
 ```php
+use Noki\WeatherDataProvider\WeatherConfig as WeatherConfig;
+
 $config = WeatherConfig::create(1, '52.5202',13.4043)->metric();
 ```
 
@@ -105,6 +117,8 @@ Required fields:
 - **units** is by default set to metric unit, you can overwrite it if you want imperial units. Avoiding this filed will output metric units.
 
 ```php
+use Noki\WeatherDataProvider\WeatherConfig as WeatherConfig;
+
 $config = WeatherConfig::fromArray([
         'provider_id' => 1,
         'config_location' => [
@@ -131,6 +145,8 @@ $config = WeatherConfig::fromArray([
 Settings below will provide temperature, wind and pressure data for frequencies per minute and per hour. Units will be metric.
 
 ```php
+use Noki\WeatherDataProvider\WeatherConfig as WeatherConfig;
+
 $config = WeatherConfig::fromArray([
         'provider_id' => 1,
         'config_location' => [
@@ -153,6 +169,9 @@ $config = WeatherConfig::fromArray([
 #### Examples of weather data providing
 
 ```php
+use Noki\WeatherDataProvider\WeatherConfig as WeatherConfig;
+use Noki\WeatherDataProvider\ProviderGenerator;
+
 $config = WeatherConfig::create(1, '52.5202','13.4043');
 $provider = new ProviderGenerator($config);
 // Weather data for frequencies that you have choose
